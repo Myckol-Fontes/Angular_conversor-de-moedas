@@ -37,6 +37,20 @@ export class ConversorComponent implements OnInit {
   	this.possuiErro = false;
   }
 
-
+  /**
+   * Efetua a chamada para a conversão dos valores.
+   *
+   * @return void
+   */
+  converter(): void {
+  	if (this.conversaoForm.form.valid) {
+  	  this.conversorService
+        .converter(this.conversao)
+        .subscribe(
+          response => this.conversaoResponse = response,
+          error => this.possuiErro = true
+        );
+  	}
+  }
 
 }
