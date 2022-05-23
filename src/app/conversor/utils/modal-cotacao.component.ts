@@ -36,5 +36,10 @@ export class ModalCotacaoComponent implements OnInit {
 	  			.toFixed(2);
 	}
 
+	get cotacaoPara(): number {
+	  	return this.conversorService.cotacaoPara(
+	  		this.conversaoResponse, this.conversao);
+	}
+
 
 }
