@@ -46,5 +46,8 @@ export class ModalCotacaoComponent implements OnInit {
 	  		this.conversaoResponse, this.conversao);
 	}
 
-
+	get dataCotacao(): string {
+		return this.conversorService.dataCotacao(
+	  		this.conversaoResponse);
+	}
 }
