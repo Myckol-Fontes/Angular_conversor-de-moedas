@@ -61,6 +61,18 @@ export class ConversorService {
   		.toFixed(4);
   }
 
+  /**
+   * Retorna a data da cotação dado uma response.
+   *
+   * @param ConversaoResponse conversaoResponse
+   * @return string
+   */
+  dataCotacao(conversaoResponse: ConversaoResponse): string {
+    if (conversaoResponse === undefined) {
+      return '';
+    }
 
+    return conversaoResponse.date;
+  }
 
 }
