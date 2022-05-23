@@ -22,5 +22,9 @@ export class ModalCotacaoComponent implements OnInit {
 	ngOnInit() {
   	}
 
+	novaConsulta() {
+		this.onConfirm.emit();
+	}
+
 
 }
