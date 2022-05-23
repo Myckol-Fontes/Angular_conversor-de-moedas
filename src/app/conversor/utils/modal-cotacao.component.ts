@@ -26,5 +26,15 @@ export class ModalCotacaoComponent implements OnInit {
 		this.onConfirm.emit();
 	}
 
+	get valorConvertido(): string {
+	  	if (this.conversaoResponse === undefined) {
+	  		return '0';
+	  	}
+
+	  	return (this.conversao.valor *
+	  		this.conversaoResponse.rates[this.conversao.moedaPara])
+	  			.toFixed(2);
+	}
+
 
 }
